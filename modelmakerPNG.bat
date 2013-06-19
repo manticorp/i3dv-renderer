@@ -54,4 +54,3 @@ DEL *.jpg /F /Q
 cd ..
 DEL *.png /F /Q
 ECHO FINISHED
-pause
