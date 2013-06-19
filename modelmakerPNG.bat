@@ -3,12 +3,19 @@ IF "%2"=="" (set /p color="What colour would you like the background (format #AB
 IF "%color%"=="" (set color="#00FF00")
 echo Color equals %color%
 @Echo OFF
-Set "AbsolutePath=%1"
+Set "AbsolutePath=%1%"
+for /f "delims=" %%A in (%AbsolutePath%) do (
+    set foldername=%%~nxA
+)
+Echo Folder 1 : %foldername%
+IF "%foldername%"=="" (GOTO NoFolder) ELSE (GOTO GotFolder)
+:NoFolder
 set "AbsolutePath=%AbsolutePath:\= %"
 FOR %%# in (%AbsolutePath%) do (
     Set "LastFolder=%%#"
 )
-Echo Folder: %LastFolder%
+Echo Folder 2 : %LastFolder%
+:GotFolder
 md %1\videos
 mogrify -background "%color%" -flatten -verbose -format jpg %1\*.png
 copy /y %1\%LastFolder%0149.jpg %1\videos\thumb.jpg
