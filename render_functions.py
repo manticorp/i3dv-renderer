@@ -48,7 +48,7 @@ def parseConfig(config_file = "config.ini"):
     settings[section_name]["levels"]            = parser.getint("default render settings","levels")
     settings[section_name]["degrees"]           = parser.getint("default render settings","degrees")
     settings[section_name]["plane"]             = parser.getint("default render settings","plane")
-    settings[section_name]["transparent"]             = parser.getint("default render settings","transparent")
+    settings[section_name]["transparent"]       = parser.getint("default render settings","transparent")
     settings[section_name]["stationary_camera"] = parser.getint("default render settings","stationary_camera")
     # List value    
     settings[section_name]["specular_RGBi"]     = json.loads(parser.get("default render settings","specular_rgbi"))
@@ -180,16 +180,16 @@ def is_numeric(var):
         return False
 
 class Error(Exception):
-    """Base class for exceptions in this module."""
+    '''Base class for exceptions in this module.'''
     pass
     
 class InputError(Error):
-    """Exception raised for errors in the input.
+    '''Exception raised for errors in the input.
 
     Attributes:
         expr -- input expression in which the error occurred
         msg  -- explanation of the error
-    """
+    '''
 
     def __init__(self, expr, msg):
         self.msg = msg

@@ -1,0 +1,30 @@
+// pseudocode of what needs to happen
+
+jobid = argv[-1]
+
+object = importModel(jobid/model.[ext])       <-|   This could be integrated here.
+settings = parseOptions(jobid/options.json)     |
+                                                |
+scale(object)                           --------|
+
+############ Initital one layer BLENDER engine render
+material = createMaterial(settings["colour"], settings["material"], "BLENDER_RENDER")
+applyMaterial(material, object)
+
+outputfolder = jobid . "/output/1layer/images/"
+setRenderFrames(288, 288+36)
+renderAnimation(outputfolder, "BLENDER_RENDER")
+moveJobToCDN(jobid)
+
+############ Initital all layer BLENDER engine render
+outputfolder = jobid . "/output/blender/images/"
+setRenderFrames(0, 612)
+renderAnimation(outputfolder, "BLENDER_RENDER")
+
+############ Final all layer CYCLES engine render
+material = createMaterial(settings["colour"], settings["material"], "CYCLES")
+applyMaterial(material, object)
+
+outputfolder = jobid . "/output/cycles/images/"
+renderAnimation(outputfolder, "BLENDER_RENDER")
+moveJobToCDN(jobid)
