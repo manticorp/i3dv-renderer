@@ -19,7 +19,7 @@ You must have installed
 
 ### Simple Renderer
 
-Checkout the simple branch. This is a nice simple renderer for creating i3dv render files.
+Checkout the [simple branch](https://github.com/Exponim/i3dv-renderer/tree/simple). This is a nice simple renderer for creating i3dv render files.
 
 This renderer will automatically create renders of STL files in a neutral grey colour. The colour
 can be changed by editing the 'custom' material in the render.blend file.
