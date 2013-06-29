@@ -1,6 +1,7 @@
 *.blend1
 *.blend2
 *.blend3
+__pycache__/
 
 # Packages #
 ############
