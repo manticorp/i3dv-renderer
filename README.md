@@ -48,8 +48,16 @@ TODO make .sh files to replace render.bat and i3dv-maker.bat
 License
 =======
 
-This program is private, intended for use only by Exponim Limited and its subsidiaries.
+Copyright 2013 Manticorp
 
-As such, it is not intended for public use. Only those with the explicit permission of 
-Exponim's directors and/or those appointed by Exponim with the explicit written authority 
-to do so may alter the source code of this software.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
