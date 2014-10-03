@@ -48,8 +48,4 @@ TODO make .sh files to replace render.bat and i3dv-maker.bat
 License
 =======
 
-This program is private, intended for use only by Exponim Limited and its subsidiaries.
-
-As such, it is not intended for public use. Only those with the explicit permission of 
-Exponim's directors and/or those appointed by Exponim with the explicit written authority 
-to do so may alter the source code of this software.
+This program is completely free and gratis - do with it what you want!
